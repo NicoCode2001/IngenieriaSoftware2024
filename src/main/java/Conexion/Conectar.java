@@ -17,7 +17,7 @@ public class Conectar{
         Class.forName("com.mysql.jdbc.Driver");
         connection = DriverManager.getConnection(url,login,password);
         if (connection!=null){
-            System.out.println("Conexión a base de datos "+bd+" OK\n");
+            System.out.println("Conexiï¿½n a base de datos "+bd+" OK\n");
         }
         }catch(SQLException ex){
             System.out.println(ex.getMessage());
@@ -36,3 +36,4 @@ public class Conectar{
 
 
 }
+//mirian
