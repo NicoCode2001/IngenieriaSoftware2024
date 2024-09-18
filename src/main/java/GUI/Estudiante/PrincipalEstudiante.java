@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package igu;
+package GUI.Estudiante;
 
+import GUI.Estudiante.Principal;
 import java.awt.Color;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -18,12 +19,12 @@ import logica.Usuario;
  *
  * @author dgera
  */
-public class PrincipalSecretario extends javax.swing.JFrame {
+public class PrincipalEstudiante extends javax.swing.JFrame {
 
     /**
      * Creates new form Pantalla
      */
-    public PrincipalSecretario() {
+    public PrincipalEstudiante() {
         initComponents();
     }
 
@@ -40,18 +41,18 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         panelIzq = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnInfo = new javax.swing.JPanel();
-        txtInfo = new javax.swing.JLabel();
-        iconInfo = new javax.swing.JLabel();
+        btninscr = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         btnpri = new javax.swing.JPanel();
         iconpri = new javax.swing.JLabel();
         txtpri = new javax.swing.JLabel();
-        btnEvaluacion = new javax.swing.JPanel();
-        iconEvaluacion = new javax.swing.JLabel();
-        txtEvaluacion = new javax.swing.JLabel();
-        btnFacturas = new javax.swing.JPanel();
-        iconFacturas = new javax.swing.JLabel();
-        txtFacturas = new javax.swing.JLabel();
+        btnreservas = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        btnturnos = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         btnconfig = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -68,7 +69,8 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
         panelDer.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fondo2.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/chicas.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
 
         javax.swing.GroupLayout panelDerLayout = new javax.swing.GroupLayout(panelDer);
         panelDer.setLayout(panelDerLayout);
@@ -87,49 +89,50 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
 
-        btnInfo.setBackground(new java.awt.Color(175, 0, 0));
-        btnInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnInfo.setPreferredSize(new java.awt.Dimension(270, 51));
-        btnInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+        btninscr.setBackground(new java.awt.Color(175, 0, 0));
+        btninscr.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btninscr.setPreferredSize(new java.awt.Dimension(270, 51));
+        btninscr.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnInfoMouseEntered(evt);
+                btninscrMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnInfoMouseExited(evt);
+                btninscrMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnInfoMousePressed(evt);
+                btninscrMousePressed(evt);
             }
         });
-        btnInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btninscr.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtInfo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtInfo.setForeground(new java.awt.Color(255, 255, 255));
-        txtInfo.setText("Mis informes");
-        txtInfo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtInfo.addAncestorListener(new javax.swing.event.AncestorListener() {
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/archivo.png"))); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel13MousePressed(evt);
+            }
+        });
+        btninscr.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Mis inscripciones");
+        jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel14.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                txtInfoAncestorAdded(evt);
+                jLabel14AncestorAdded(evt);
             }
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        txtInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtInfoMousePressed(evt);
+                jLabel14MousePressed(evt);
             }
         });
-        btnInfo.add(txtInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
-
-        iconInfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/archivo.png"))); // NOI18N
-        iconInfo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                iconInfoMousePressed(evt);
-            }
-        });
-        btnInfo.add(iconInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        btninscr.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         btnpri.setBackground(new java.awt.Color(183, 52, 66));
         btnpri.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -165,75 +168,75 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         });
         btnpri.add(txtpri, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
-        btnEvaluacion.setBackground(new java.awt.Color(175, 0, 0));
-        btnEvaluacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEvaluacion.setPreferredSize(new java.awt.Dimension(270, 51));
-        btnEvaluacion.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnreservas.setBackground(new java.awt.Color(175, 0, 0));
+        btnreservas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnreservas.setPreferredSize(new java.awt.Dimension(270, 51));
+        btnreservas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnEvaluacionMouseEntered(evt);
+                btnreservasMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnEvaluacionMouseExited(evt);
+                btnreservasMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnEvaluacionMousePressed(evt);
+                btnreservasMousePressed(evt);
             }
         });
-        btnEvaluacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnreservas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        iconEvaluacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        iconEvaluacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/inscripcion.png"))); // NOI18N
-        iconEvaluacion.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar-plus.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                iconEvaluacionMousePressed(evt);
+                jLabel3MousePressed(evt);
             }
         });
-        btnEvaluacion.add(iconEvaluacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+        btnreservas.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        txtEvaluacion.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtEvaluacion.setForeground(new java.awt.Color(255, 255, 255));
-        txtEvaluacion.setText("Mis evaluaciones");
-        txtEvaluacion.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Mis reservas");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtEvaluacionMousePressed(evt);
+                jLabel4MousePressed(evt);
             }
         });
-        btnEvaluacion.add(txtEvaluacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
+        btnreservas.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
-        btnFacturas.setBackground(new java.awt.Color(175, 0, 0));
-        btnFacturas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnFacturas.setPreferredSize(new java.awt.Dimension(270, 51));
-        btnFacturas.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnturnos.setBackground(new java.awt.Color(175, 0, 0));
+        btnturnos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnturnos.setPreferredSize(new java.awt.Dimension(270, 51));
+        btnturnos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnFacturasMouseEntered(evt);
+                btnturnosMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnFacturasMouseExited(evt);
+                btnturnosMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnFacturasMousePressed(evt);
+                btnturnosMousePressed(evt);
             }
         });
-        btnFacturas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnturnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        iconFacturas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        iconFacturas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/factura.png"))); // NOI18N
-        iconFacturas.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/asistencia-medica.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                iconFacturasMousePressed(evt);
+                jLabel7MousePressed(evt);
             }
         });
-        btnFacturas.add(iconFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        btnturnos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        txtFacturas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtFacturas.setForeground(new java.awt.Color(255, 255, 255));
-        txtFacturas.setText("Mis facturas");
-        txtFacturas.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Mis turnos");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtFacturasMousePressed(evt);
+                jLabel8MousePressed(evt);
             }
         });
-        btnFacturas.add(txtFacturas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
+        btnturnos.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         btnconfig.setBackground(new java.awt.Color(175, 0, 0));
         btnconfig.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -253,11 +256,21 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/configuraciones.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel9MousePressed(evt);
+            }
+        });
         btnconfig.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Configuración");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel10MousePressed(evt);
+            }
+        });
         btnconfig.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         btncerrar.setBackground(new java.awt.Color(175, 0, 0));
@@ -278,6 +291,11 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/cerrar-sesion.png"))); // NOI18N
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel11MousePressed(evt);
+            }
+        });
         btncerrar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -306,11 +324,11 @@ public class PrincipalSecretario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnpri, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFacturas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btninscr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnturnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnconfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEvaluacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnreservas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         panelIzqLayout.setVerticalGroup(
             panelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,10 +340,10 @@ public class PrincipalSecretario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnpri, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(panelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btninscr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelIzqLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addComponent(btnFacturas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnturnos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelIzqLayout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addComponent(btncerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -334,7 +352,7 @@ public class PrincipalSecretario extends javax.swing.JFrame {
                         .addComponent(btnconfig, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelIzqLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
-                        .addComponent(btnEvaluacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnreservas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
 
@@ -343,23 +361,23 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInfoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseEntered
+    private void btninscrMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninscrMouseEntered
 
-    }//GEN-LAST:event_btnInfoMouseEntered
+    }//GEN-LAST:event_btninscrMouseEntered
 
-    private void btnInfoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMouseExited
+    private void btninscrMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninscrMouseExited
 
-    }//GEN-LAST:event_btnInfoMouseExited
+    }//GEN-LAST:event_btninscrMouseExited
 
-    private void btnInfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoMousePressed
+    private void btninscrMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninscrMousePressed
         resetColor(btnpri);
-        setColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        setColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisInformes p1 = new MisInformes();
+        MisInscripciones p1 = new MisInscripciones();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -367,7 +385,7 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_btnInfoMousePressed
+    }//GEN-LAST:event_btninscrMousePressed
 
     private void btnpriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnpriMouseEntered
 
@@ -379,13 +397,13 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
     private void btnpriMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnpriMousePressed
         setColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        Secretario p1 = new Secretario();
+        Principal p1 = new Principal();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -395,23 +413,23 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.repaint();
     }//GEN-LAST:event_btnpriMousePressed
 
-    private void btnEvaluacionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEvaluacionMouseEntered
+    private void btnreservasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservasMouseEntered
 
-    }//GEN-LAST:event_btnEvaluacionMouseEntered
+    }//GEN-LAST:event_btnreservasMouseEntered
 
-    private void btnEvaluacionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEvaluacionMouseExited
+    private void btnreservasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservasMouseExited
 
-    }//GEN-LAST:event_btnEvaluacionMouseExited
+    }//GEN-LAST:event_btnreservasMouseExited
 
-    private void btnEvaluacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEvaluacionMousePressed
+    private void btnreservasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnreservasMousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        setColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        setColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisEvaluaciones p1 = new MisEvaluaciones();
+        MisReservas p1 = new MisReservas();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -419,25 +437,25 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_btnEvaluacionMousePressed
+    }//GEN-LAST:event_btnreservasMousePressed
 
-    private void btnFacturasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFacturasMouseEntered
+    private void btnturnosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturnosMouseEntered
 
-    }//GEN-LAST:event_btnFacturasMouseEntered
+    }//GEN-LAST:event_btnturnosMouseEntered
 
-    private void btnFacturasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFacturasMouseExited
+    private void btnturnosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturnosMouseExited
   
-    }//GEN-LAST:event_btnFacturasMouseExited
+    }//GEN-LAST:event_btnturnosMouseExited
 
-    private void btnFacturasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFacturasMousePressed
+    private void btnturnosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnturnosMousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        setColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        setColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisFacturas p1 = new MisFacturas();
+        MisTurnos p1 = new MisTurnos();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -445,7 +463,7 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_btnFacturasMousePressed
+    }//GEN-LAST:event_btnturnosMousePressed
 
     private void btnconfigMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconfigMouseEntered
 
@@ -457,9 +475,9 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
     private void btnconfigMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconfigMousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         setColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
@@ -483,9 +501,9 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
     private void btncerrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         setColor(btncerrar);
         Sesion.cerrarSesion();
@@ -497,12 +515,29 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btncerrarMousePressed
 
-    private void jLabel12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MousePressed
-        // TODO add your handling code here:
+    private void jLabel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        setColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
+        resetColor(btnconfig);
+        resetColor(btncerrar);
+        // Abrir sección
+        MisInscripciones p1 = new MisInscripciones();
+        p1.setSize(530, 540);
+        p1.setLocation(0,0);
+
+        panelDer.removeAll();
+        panelDer.add(p1, BorderLayout.CENTER);
+        panelDer.revalidate();
+        panelDer.repaint();
+    }//GEN-LAST:event_jLabel13MousePressed
+
+    private void jLabel12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MousePressed
+        resetColor(btnpri);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         setColor(btncerrar);
         Sesion.cerrarSesion();
@@ -514,15 +549,15 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel12MousePressed
 
-    private void txtInfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtInfoMousePressed
+    private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MousePressed
         resetColor(btnpri);
-        setColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        setColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisInformes p1 = new MisInformes();
+        MisInscripciones p1 = new MisInscripciones();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -530,22 +565,57 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_txtInfoMousePressed
+    }//GEN-LAST:event_jLabel14MousePressed
 
-    private void txtInfoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_txtInfoAncestorAdded
+    private void jLabel14AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel14AncestorAdded
 
-    }//GEN-LAST:event_txtInfoAncestorAdded
+    }//GEN-LAST:event_jLabel14AncestorAdded
+
+    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
+        resetColor(btnpri);
+        resetColor(btninscr);
+        resetColor(btnconfig);
+        resetColor(btnturnos);
+        setColor(btnreservas);
+        resetColor(btncerrar);
+        // Abrir sección
+        MisReservas p1 = new MisReservas();
+        p1.setSize(530, 540);
+        p1.setLocation(0,0);
+
+        panelDer.removeAll();
+        panelDer.add(p1, BorderLayout.CENTER);
+        panelDer.revalidate();
+        panelDer.repaint();
+    }//GEN-LAST:event_jLabel4MousePressed
+
+    private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
+        resetColor(btnpri);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
+        setColor(btnconfig);
+        resetColor(btncerrar);
+        // Abrir sección
+        MisReservas p1 = new MisReservas();
+        p1.setSize(530, 540);
+        p1.setLocation(0,0);
+
+        panelDer.removeAll();
+        panelDer.add(p1, BorderLayout.CENTER);
+        panelDer.revalidate();
+        panelDer.repaint();
+    }//GEN-LAST:event_jLabel3MousePressed
 
     private void txtpriMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtpriMousePressed
-        // TODO add your handling code here:
         setColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        Secretario p1 = new Secretario();
+        Principal p1 = new Principal();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -556,15 +626,14 @@ public class PrincipalSecretario extends javax.swing.JFrame {
     }//GEN-LAST:event_txtpriMousePressed
 
     private void iconpriMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconpriMousePressed
-        // TODO add your handling code here:
         setColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        Secretario p1 = new Secretario();
+        Principal p1 = new Principal();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -574,16 +643,15 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.repaint();
     }//GEN-LAST:event_iconpriMousePressed
 
-    private void txtEvaluacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtEvaluacionMousePressed
-        // TODO add your handling code here:
+    private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        setColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        setColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisEvaluaciones p1 = new MisEvaluaciones();
+        MisTurnos p1 = new MisTurnos();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -591,18 +659,17 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_txtEvaluacionMousePressed
+    }//GEN-LAST:event_jLabel8MousePressed
 
-    private void iconEvaluacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconEvaluacionMousePressed
-        // TODO add your handling code here:
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        setColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        setColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisEvaluaciones p1 = new MisEvaluaciones();
+        MisTurnos p1 = new MisTurnos();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -610,18 +677,17 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_iconEvaluacionMousePressed
+    }//GEN-LAST:event_jLabel7MousePressed
 
-    private void iconFacturasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconFacturasMousePressed
-        // TODO add your handling code here:
+    private void jLabel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        setColor(btnFacturas);
-        resetColor(btnconfig);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
+        setColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisFacturas p1 = new MisFacturas();
+        Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -629,18 +695,17 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_iconFacturasMousePressed
+    }//GEN-LAST:event_jLabel10MousePressed
 
-    private void txtFacturasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFacturasMousePressed
-        // TODO add your handling code here:
+    private void jLabel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MousePressed
         resetColor(btnpri);
-        resetColor(btnInfo);
-        resetColor(btnEvaluacion);
-        setColor(btnFacturas);
-        resetColor(btnconfig);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
+        setColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
-        MisFacturas p1 = new MisFacturas();
+        Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
@@ -648,26 +713,23 @@ public class PrincipalSecretario extends javax.swing.JFrame {
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
         panelDer.repaint();
-    }//GEN-LAST:event_txtFacturasMousePressed
+    }//GEN-LAST:event_jLabel9MousePressed
 
-    private void iconInfoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconInfoMousePressed
-        // TODO add your handling code here:
+    private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
         resetColor(btnpri);
-        setColor(btnInfo);
-        resetColor(btnEvaluacion);
-        resetColor(btnFacturas);
+        resetColor(btninscr);
+        resetColor(btnreservas);
+        resetColor(btnturnos);
         resetColor(btnconfig);
-        resetColor(btncerrar);
-        // Abrir sección
-        MisInformes p1 = new MisInformes();
-        p1.setSize(530, 540);
-        p1.setLocation(0,0);
-
-        panelDer.removeAll();
-        panelDer.add(p1, BorderLayout.CENTER);
-        panelDer.revalidate();
-        panelDer.repaint();
-    }//GEN-LAST:event_iconInfoMousePressed
+        setColor(btncerrar);
+        Sesion.cerrarSesion();
+        IniciarSesion iniciarSesion = new IniciarSesion();
+        iniciarSesion.setVisible(true);
+        iniciarSesion.setLocationRelativeTo(null);
+        // Ocultar el JFrame actual
+        this.setVisible(false);
+        this.dispose();
+    }//GEN-LAST:event_jLabel11MousePressed
 
     void setColor(JPanel panel){
         panel.setBackground(new Color(183,52,66));
@@ -683,28 +745,29 @@ public class PrincipalSecretario extends javax.swing.JFrame {
 
     public static javax.swing.JPanel content;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel btnEvaluacion;
-    private javax.swing.JPanel btnFacturas;
-    private javax.swing.JPanel btnInfo;
     private javax.swing.JPanel btncerrar;
     private javax.swing.JPanel btnconfig;
+    private javax.swing.JPanel btninscr;
     private javax.swing.JPanel btnpri;
-    private javax.swing.JLabel iconEvaluacion;
-    private javax.swing.JLabel iconFacturas;
-    private javax.swing.JLabel iconInfo;
+    private javax.swing.JPanel btnreservas;
+    private javax.swing.JPanel btnturnos;
     private javax.swing.JLabel iconpri;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel panelDer;
     private javax.swing.JPanel panelIzq;
-    private javax.swing.JLabel txtEvaluacion;
-    private javax.swing.JLabel txtFacturas;
-    private javax.swing.JLabel txtInfo;
     private javax.swing.JLabel txtpri;
     // End of variables declaration//GEN-END:variables
+
 }

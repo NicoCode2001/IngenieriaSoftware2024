@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package igu;
+package GUI.Estudiante;
 
+import GUI.Estudiante.FormularioBeca;
+import GUI.Estudiante.FormularioDeporte;
 import conexion.Conexion;
 import java.awt.BorderLayout;
 import javax.swing.*;

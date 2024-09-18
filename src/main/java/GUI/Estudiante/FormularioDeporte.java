@@ -1,6 +1,7 @@
 
-package igu;
+package GUI.Estudiante;
 
+import GUI.Estudiante.PrincipalEstudiante;
 import conexion.Conexion;
 import java.awt.BorderLayout;
 import java.awt.Window;

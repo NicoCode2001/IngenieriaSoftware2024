@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package igu;
+package GUI.Estudiante;
 
+import GUI.Estudiante.PrincipalEstudiante;
 import conexion.Conexion;
 import logica.Sesion;
 import logica.Usuario;

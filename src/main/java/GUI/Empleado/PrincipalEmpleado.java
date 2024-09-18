@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package igu;
+package GUI.Empleado;
 
+import GUI.Empleado.PedidosMenuEmpleado;
 import java.awt.Color;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;

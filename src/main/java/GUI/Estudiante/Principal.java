@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package igu;
+package GUI.Estudiante;
 
 /**
  *
- * @author LENOVO
+ * @author dgera
  */
-public class Secretario extends javax.swing.JPanel {
+public class Principal extends javax.swing.JPanel {
 
     /**
-     * Creates new form Secretario
+     * Creates new form Principal
      */
-    public Secretario() {
+    public Principal() {
         initComponents();
     }
 
@@ -28,7 +28,8 @@ public class Secretario extends javax.swing.JPanel {
 
         jLabel6 = new javax.swing.JLabel();
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fondo2.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/chicas.png"))); // NOI18N
+        jLabel6.setText("jLabel6");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

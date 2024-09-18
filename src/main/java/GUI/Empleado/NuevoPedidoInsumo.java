@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package igu;
+package GUI.Empleado;
 import conexion.Conexion;
 import java.awt.Color;
 import java.io.File;
@@ -165,7 +165,6 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fecha");
 
-        txtfecha.setBackground(new java.awt.Color(255, 255, 255));
         txtfecha.setText("DD/MM/AA");
         txtfecha.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -177,11 +176,9 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Área donde se van a destinar los insumos");
 
-        txtdni.setBackground(new java.awt.Color(255, 255, 255));
         txtdni.setText("12345678");
         txtdni.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtarea.setBackground(new java.awt.Color(255, 255, 255));
         txtarea.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -192,14 +189,10 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
         CantUnidades.setForeground(new java.awt.Color(255, 255, 255));
         CantUnidades.setText("Cantidad de Unidades");
 
-        CampoNombreProducto.setBackground(new java.awt.Color(255, 255, 255));
         CampoNombreProducto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtcantu.setBackground(new java.awt.Color(255, 255, 255));
         txtcantu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        AniadirProducto.setBackground(new java.awt.Color(255, 255, 255));
-        AniadirProducto.setForeground(new java.awt.Color(0, 0, 0));
         AniadirProducto.setText("Añadir Producto");
         AniadirProducto.setBorderPainted(false);
         AniadirProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -208,8 +201,6 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
             }
         });
 
-        EliminarProducto.setBackground(new java.awt.Color(255, 255, 255));
-        EliminarProducto.setForeground(new java.awt.Color(0, 0, 0));
         EliminarProducto.setText("Eliminar Producto");
         EliminarProducto.setBorderPainted(false);
         EliminarProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +209,6 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
             }
         });
 
-        btnenviar.setBackground(new java.awt.Color(255, 255, 255));
         btnenviar.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         btnenviar.setForeground(new java.awt.Color(153, 0, 0));
         btnenviar.setText("Enviar");

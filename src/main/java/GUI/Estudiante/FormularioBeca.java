@@ -1,6 +1,7 @@
 
-package igu;
+package GUI.Estudiante;
 
+import GUI.Estudiante.PrincipalEstudiante;
 import conexion.Conexion;
 import java.io.File;
 import java.io.FileInputStream;

@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package igu;
+package GUI.Empleado;
 
+import GUI.Empleado.NuevoPedidoInsumo;
 import java.sql.Statement;
 import javax.swing.JFrame;
 import conexion.Conexion;
@@ -59,8 +60,6 @@ public class PedidosMenuEmpleado extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Mis Solicitudes");
 
-        RealizarNuevoPedido.setBackground(new java.awt.Color(255, 255, 255));
-        RealizarNuevoPedido.setForeground(new java.awt.Color(0, 0, 0));
         RealizarNuevoPedido.setText("Realizar nuevo pedido");
         RealizarNuevoPedido.setBorder(null);
         RealizarNuevoPedido.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -69,8 +68,6 @@ public class PedidosMenuEmpleado extends javax.swing.JPanel {
             }
         });
 
-        HistorialPedidos.setBackground(new java.awt.Color(255, 255, 255));
-        HistorialPedidos.setForeground(new java.awt.Color(0, 0, 0));
         HistorialPedidos.setText("Historial Pedidos");
         HistorialPedidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
