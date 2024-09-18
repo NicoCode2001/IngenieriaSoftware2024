@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class Conectar{
 
-    static String bd = "";
-    static String login = "";
+    static String bd = "bienestar";
+    static String login = "root";
     static String password = "";
-    static String url = "jdbc:mysql://localhost/"+bd;
+    static String url = "jdbc:mysql://localhost:3306/"+bd;
     Connection connection = null;
 
     public Conectar(){

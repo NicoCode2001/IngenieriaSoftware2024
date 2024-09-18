@@ -127,7 +127,46 @@ public class UsuarioDAO{
                 conec.desconectar();
             }catch(Exception ex){}
         }
+    };
+    
+    
+    public ArrayList<UsuarioVO> buscarUsuario(String usuario, String contrasenia) {
+        
+        Conectar conec = new Conectar();
+        String sql = "SELECT * FROM cuentaUsuario where usuario = '"+usuario+"';";
+        ResultSet rs = null;
+        PreparedStatement ps = null;
+        UsuarioVO vo = null;
+        ArrayList<UsuarioVO> list = new ArrayList<UsuarioVO>();
+        try{
+            ps = conec.getConnection().prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                vo = new UsuarioVO();
+                vo.setNombreUsuario(rs.getString(1));
+                vo.setContraseniaUsuario(rs.getString(2));
+                vo.setRol(rs.getString(3));
+                list.add(vo);
+               
+            }
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                ps.close();
+                rs.close();
+                conec.desconectar();
+            }catch(Exception ex){}
+        }
+        return list;
+        
+        
+        
+  
     }
-
+    
 
 }
