@@ -4,18 +4,23 @@
  */
 package GUI.Estudiante;
 
-import GUI.Estudiante.PrincipalEstudiante;
-import conexion.Conexion;
+
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import javax.swing.JOptionPane;
-import logica.Sesion;
-import logica.Usuario;
-import logica.reservaVianda;
 
 
 public class CancelarVianda extends javax.swing.JFrame {
 
    
     public CancelarVianda() {
+        /*
         initComponents();
         Usuario usuarioActivo = Sesion.getUsuarioActual();
         Conexion conn = new Conexion();
@@ -25,7 +30,7 @@ public class CancelarVianda extends javax.swing.JFrame {
         guarnicionDinamico.setText(reser.getGuarnicion());
         postreDinamico.setText(reser.getPostre());
        
-        
+       */ 
     }
 
      String mensajeCancelar = "¿Estás seguro que quieres cancelar?\n\n                  Sí        No";
@@ -280,7 +285,7 @@ public class CancelarVianda extends javax.swing.JFrame {
     }//GEN-LAST:event_iconatrasMousePressed
 
     private void cancelarReservaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelarReservaMousePressed
-         Usuario usuarioActivo = Sesion.getUsuarioActual();
+        /* Usuario usuarioActivo = Sesion.getUsuarioActual();
          // Mostrar el mensaje y obtener la respuesta del usuario
                 int respuesta = JOptionPane.showConfirmDialog(null, mensajeCancelar, "Alerta de Cancelación", JOptionPane.YES_NO_OPTION);
              // Procesar la respuesta del usuario
@@ -299,7 +304,7 @@ public class CancelarVianda extends javax.swing.JFrame {
                     
                     
                     
-                }
+                }*/
                  
     }//GEN-LAST:event_cancelarReservaMousePressed
 

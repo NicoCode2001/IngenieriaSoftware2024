@@ -7,7 +7,14 @@ package GUI.Secretario;
 import GUI.Secretario.Cargar_FacturaRemito;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import java.awt.BorderLayout;
 import javax.swing.*;
 import java.awt.event.*;

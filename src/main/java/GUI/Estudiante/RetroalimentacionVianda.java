@@ -4,10 +4,14 @@
  */
 package GUI.Estudiante;
 
-import GUI.Estudiante.PrincipalEstudiante;
-import conexion.Conexion;
-import logica.Sesion;
-import logica.Usuario;
+
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
 
 /**
  *
@@ -304,7 +308,7 @@ public class RetroalimentacionVianda extends javax.swing.JFrame {
     }//GEN-LAST:event_caliMalaActionPerformed
 
     private void enviarRetroalimentacionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_enviarRetroalimentacionMousePressed
-        Usuario usuarioActivo = Sesion.getUsuarioActual();
+       /* Usuario usuarioActivo = Sesion.getUsuarioActual();
             
             if (caliMala.isSelected()){
                 calificacionSeleccionada = "Mala";
@@ -354,7 +358,7 @@ public class RetroalimentacionVianda extends javax.swing.JFrame {
                  javax.swing.JOptionPane.showMessageDialog(this, 
             "¡Error al registrar la retroalimentacion!\nPor favor, seleccione la calificacion(*).", 
             "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            }
+            }*/
         
     }//GEN-LAST:event_enviarRetroalimentacionMousePressed
 

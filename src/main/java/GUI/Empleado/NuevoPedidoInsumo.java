@@ -3,7 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package GUI.Empleado;
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,8 +29,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
-import logica.Sesion;
-import logica.Usuario;
+
 /**
  *
  * @author Anita
@@ -66,6 +72,7 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
     }
     
     public void agregarPedidoBD(){
+        /*
         //se obtienen los datos de los campos ingresados
         String fecha = txtfecha.getText();
         String dni = txtdni.getText();
@@ -120,7 +127,7 @@ public class NuevoPedidoInsumo extends javax.swing.JPanel {
         }catch(Exception e){
         }
         
-    }
+   */ }
 
     /**
      * This method is called from within the constructor to initialize the form.

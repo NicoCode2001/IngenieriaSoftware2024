@@ -1,11 +1,14 @@
 package GUI;
-
+import icons.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import Conexion.*;
-import Dao.*;
+import DAO.*;
 import Tabla.*;
-import Vo.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
 import java.util.ArrayList;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -340,31 +343,40 @@ public class IniciarSesion extends javax.swing.JFrame {
     private void txtingresarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtingresarMousePressed
         String nombre = user.getText();
         String contraseña = new String(password.getPassword());
-        boolean isValid = conexion.validarUsuario(nombre, contraseña);
-        if (isValid) {
-            Conexion conn = new Conexion();
-            conn.crearUsuario(nombre, contraseña);
-            Usuario usuarioActivo = Sesion.getUsuarioActual();
-            
-            System.out.println(usuarioActivo.getRol());
-            
-            if (usuarioActivo.getRol().equals("Estudiante")){
-                PrincipalEstudiante principalEs = new PrincipalEstudiante();
-                principalEs.setVisible(true);
-                principalEs.setLocationRelativeTo(null);
-            }else if (usuarioActivo.getRol().equals("Empleado")){
-                PrincipalEmpleado principalEm = new PrincipalEmpleado();
-                principalEm.setVisible(true);
-                principalEm.setLocationRelativeTo(null);
-            }else{
-                PrincipalSecretario principalSe = new PrincipalSecretario();
-                principalSe.setVisible(true);
-                principalSe.setLocationRelativeTo(null);
-            }
+        
+        UsuarioDAO loguear = new UsuarioDAO();
+        
+        System.out.println(nombre+"  "+contraseña);
+        ArrayList<UsuarioVO> list = loguear.buscarUsuario(nombre, contraseña);
+         if(list.size() > 0){
+                System.out.println("Cuenta encontrada");
+                UsuarioVO cuenta = new UsuarioVO();
+                cuenta = list.get(0);//obtener cuenta
+               
+                if(nombre.equals(cuenta.getNombreUsuario()) &&   contraseña.equals(cuenta.getContraseniaUsuario())){
+                    System.out.println("Contraseña y usuario validas");
+                    
+                    String rol = cuenta.getRol();
+                     if (rol.equals("Estudiante")){
+                        PrincipalEstudiante principalEs = new PrincipalEstudiante();
+                        principalEs.setVisible(true);
+                        principalEs.setLocationRelativeTo(null);
+                    }else if (rol.equals("Empleado")){
+                        PrincipalEmpleado principalEm = new PrincipalEmpleado();
+                        principalEm.setVisible(true);
+                        principalEm.setLocationRelativeTo(null);
+                    }else{
+                        PrincipalSecretario principalSe = new PrincipalSecretario();
+                        principalSe.setVisible(true);
+                        principalSe.setLocationRelativeTo(null);
+                    }
             
             this.setVisible(false);
             this.dispose();
-        } else {
+            }else{
+                    JOptionPane.showMessageDialog(null, "Contraseña invalida!","Error",JOptionPane.WARNING_MESSAGE);
+                }
+            } else {
             javax.swing.JOptionPane.showMessageDialog(this, "¡Falló el inicio de sesión! \nDatos incorrectos", "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_txtingresarMousePressed
@@ -392,11 +404,11 @@ public class IniciarSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_txtinfoMousePressed
 
     private void jLabel5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MousePressed
-        FormularioRegistro formRegistro = new FormularioRegistro();
+       /* FormularioRegistro formRegistro = new FormularioRegistro();
         formRegistro.setVisible(true);
         formRegistro.setLocationRelativeTo(null);
         this.setVisible(false);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_jLabel5MousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

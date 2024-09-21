@@ -4,7 +4,14 @@
  */
 package GUI.Empleado;
 
-import GUI.Empleado.PedidosMenuEmpleado;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import java.awt.Color;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -12,8 +19,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
-import logica.Sesion;
-import logica.Usuario;
+
 
 /**
  *
@@ -363,14 +369,14 @@ public class PrincipalEmpleado extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();*/
         // Abrir sección
-        Configuracion p1 = new Configuracion();
+       /* Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_btnconfigMousePressed
 
     private void btnconfigMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconfigMouseExited
@@ -389,14 +395,14 @@ public class PrincipalEmpleado extends javax.swing.JFrame {
         setColor(btnevaluar);
         resetColor(btnconfig);
         // Abrir sección
-        Configuracion p1 = new Configuracion();
+      /*  Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_btnevaluarMousePressed
 
     private void btnevaluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnevaluarMouseExited
@@ -427,14 +433,14 @@ public class PrincipalEmpleado extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();*/
         // Abrir sección
-        Configuracion p1 = new Configuracion();
+       /* Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
 
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_btncerrar1MousePressed
 
     void setColor(JPanel panel){

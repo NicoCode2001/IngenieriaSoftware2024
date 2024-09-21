@@ -2,7 +2,14 @@
 package GUI.Estudiante;
 
 import GUI.Estudiante.PrincipalEstudiante;
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,8 +18,6 @@ import java.util.Vector;
 import javax.swing.AbstractButton;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import logica.Sesion;
-import logica.Usuario;
 
 /**
  *
@@ -636,7 +641,7 @@ public class FormularioBeca extends javax.swing.JFrame {
     }//GEN-LAST:event_txtborrarMousePressed
 
     private void txtenviarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtenviarMousePressed
-        Usuario usuarioActivo = Sesion.getUsuarioActual();
+        /*Usuario usuarioActivo = Sesion.getUsuarioActual();
         System.out.println(dirDNIPost + dirNegPost + dirIngPost + dirAlumRPost + dirDNIgf + dirNeggf);
         if (!" ".equals(dirDNIPost) && !" ".equals(dirNegPost) && !" ".equals(dirIngPost) && !" ".equals(dirAlumRPost) && 
                 !" ".equals(dirDNIgf) && !" ".equals(dirNeggf)) {
@@ -699,7 +704,7 @@ public class FormularioBeca extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, 
             "¡Error al registrar inscripción!\nPor favor, complete todos los campos obligatorios (*).", 
             "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_txtenviarMousePressed
 
     private void dniEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniEActionPerformed

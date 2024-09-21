@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package igu;
+package GUI;
 
 import GUI.Estudiante.PrincipalEstudiante;
 import java.awt.GridBagConstraints;
@@ -11,8 +11,14 @@ import java.awt.Insets;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
-import logica.Sesion;
-import logica.Usuario;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 
 /**
  *
@@ -24,14 +30,14 @@ public class Configuracion extends javax.swing.JPanel {
      * Creates new form MisInscripcioness
      */
     public Configuracion() {
-        initComponents();
+       /* initComponents();
         Usuario usuarioActivo = Sesion.getUsuarioActual();
         lblUsername.setText(usuarioActivo.getNombre());
         nombre.setText(usuarioActivo.getNombre());
         apellido.setText(usuarioActivo.getApellido());
         dni.setText(usuarioActivo.getDni());
         ciudad.setText(usuarioActivo.getCiudad());
-        direccion.setText(usuarioActivo.getDireccion());
+        direccion.setText(usuarioActivo.getDireccion());*/
     }
 
     /**

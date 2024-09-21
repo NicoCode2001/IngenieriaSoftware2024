@@ -6,14 +6,23 @@ package GUI.Estudiante;
 
 import GUI.Estudiante.Principal;
 import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
-import logica.Sesion;
-import logica.Usuario;
+
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 
 /**
  *
@@ -480,6 +489,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         resetColor(btnturnos);
         setColor(btnconfig);
         resetColor(btncerrar);
+        /*
         // Abrir sección
         Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
@@ -488,7 +498,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_btnconfigMousePressed
 
     private void btncerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncerrarMouseEntered
@@ -506,17 +516,18 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         resetColor(btnturnos);
         resetColor(btnconfig);
         setColor(btncerrar);
+        /*
         Sesion.cerrarSesion();
         IniciarSesion iniciarSesion = new IniciarSesion();
         iniciarSesion.setVisible(true);
         iniciarSesion.setLocationRelativeTo(null);
         // Ocultar el JFrame actual
         this.setVisible(false);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_btncerrarMousePressed
 
     private void jLabel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MousePressed
-        resetColor(btnpri);
+        /*resetColor(btnpri);
         setColor(btninscr);
         resetColor(btnreservas);
         resetColor(btnturnos);
@@ -530,7 +541,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_jLabel13MousePressed
 
     private void jLabel12MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MousePressed
@@ -540,13 +551,14 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         resetColor(btnturnos);
         resetColor(btnconfig);
         setColor(btncerrar);
+        /*
         Sesion.cerrarSesion();
         IniciarSesion iniciarSesion = new IniciarSesion();
         iniciarSesion.setVisible(true);
         iniciarSesion.setLocationRelativeTo(null);
         // Ocultar el JFrame actual
         this.setVisible(false);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_jLabel12MousePressed
 
     private void jLabel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MousePressed
@@ -687,6 +699,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         setColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
+        /*
         Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
@@ -694,7 +707,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_jLabel10MousePressed
 
     private void jLabel9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MousePressed
@@ -705,6 +718,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         setColor(btnconfig);
         resetColor(btncerrar);
         // Abrir sección
+        /*
         Configuracion p1 = new Configuracion();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
@@ -712,7 +726,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_jLabel9MousePressed
 
     private void jLabel11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MousePressed
@@ -722,13 +736,14 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         resetColor(btnturnos);
         resetColor(btnconfig);
         setColor(btncerrar);
+        /*
         Sesion.cerrarSesion();
         IniciarSesion iniciarSesion = new IniciarSesion();
         iniciarSesion.setVisible(true);
         iniciarSesion.setLocationRelativeTo(null);
         // Ocultar el JFrame actual
         this.setVisible(false);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_jLabel11MousePressed
 
     void setColor(JPanel panel){

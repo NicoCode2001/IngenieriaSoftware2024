@@ -7,14 +7,18 @@ package GUI.Estudiante;
 import GUI.Estudiante.PrincipalEstudiante;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import logica.Sesion;
-import logica.Usuario;
 
 public class ReservaVianda extends javax.swing.JFrame {
     
@@ -471,7 +475,7 @@ public class ReservaVianda extends javax.swing.JFrame {
     }//GEN-LAST:event_reservarActionPerformed
 
     private void reservarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservarMousePressed
-         Usuario usuarioActivo = Sesion.getUsuarioActual();
+         /*Usuario usuarioActivo = Sesion.getUsuarioActual();
         
             if (opClasico.isSelected()){
                 menuSeleccionado = "Clasico";
@@ -518,7 +522,7 @@ public class ReservaVianda extends javax.swing.JFrame {
                  javax.swing.JOptionPane.showMessageDialog(this, 
             "¡Error al registrar reserva!\nPor favor, seleccione un menú (*).", 
             "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            }
+            }*/
           
     }//GEN-LAST:event_reservarMousePressed
 

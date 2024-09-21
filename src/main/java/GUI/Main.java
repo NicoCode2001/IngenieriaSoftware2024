@@ -8,6 +8,7 @@ import Conexion.*;
 import DAO.*;
 import Tabla.*;
 import VO.*;
+import icons.*;
 
 
 import java.util.ArrayList;

@@ -6,14 +6,20 @@ package GUI.Estudiante;
 
 import GUI.Estudiante.FormularioBeca;
 import GUI.Estudiante.FormularioDeporte;
-import conexion.Conexion;
+
 import java.awt.BorderLayout;
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.Connection;
 import javax.swing.JPanel;
-import logica.Sesion;
-import logica.Usuario;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 /**
  *
  * @author dgera
@@ -195,7 +201,7 @@ public class MisInscripciones extends javax.swing.JPanel {
     }//GEN-LAST:event_txtdeporteMousePressed
 
     private void txtcomedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcomedorMousePressed
-        
+        /*
         Usuario usuarioActivo = Sesion.getUsuarioActual();
         Conexion conn = new Conexion();
         boolean existeRegistroBeca = conn.verificarRegistroBeca(usuarioActivo.getUsername());
@@ -213,7 +219,7 @@ public class MisInscripciones extends javax.swing.JPanel {
         }else{
             String estadoBeca = conn.estadoBeca(usuarioActivo.getUsername());
             javax.swing.JOptionPane.showMessageDialog(this, "Usted ya ha realizado su inscripción. \n ESTADO DE LA BECA COMEDOR: " + estadoBeca, "Estado Beca Comedor", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_txtcomedorMousePressed
 
 

@@ -4,12 +4,15 @@
  */
 package GUI.Estudiante;
 
-import GUI.Estudiante.CancelarVianda;
-import conexion.Conexion;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import logica.Sesion;
-import logica.Usuario;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
 
 
 /**
@@ -279,7 +282,7 @@ public class MisReservas extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel1MousePressed
 
     private void txtcomedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcomedorMousePressed
-         Usuario usuarioActivo = Sesion.getUsuarioActual();
+         /*Usuario usuarioActivo = Sesion.getUsuarioActual();
         Conexion conn = new Conexion();
         boolean existeReservaVianda = conn.verificarCancelVianda(usuarioActivo.getUsername());
         System.out.println(existeReservaVianda);
@@ -299,12 +302,12 @@ public class MisReservas extends javax.swing.JPanel {
         }else{
             
             javax.swing.JOptionPane.showMessageDialog(this, "Usted no reservo en el dia de la fecha o ya pasó el tiempo para cancelar","", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        }
+        }*/
      
     }//GEN-LAST:event_txtcomedorMousePressed
 
     private void txtcomedor2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcomedor2MousePressed
-        Usuario usuarioActivo = Sesion.getUsuarioActual();
+        /*Usuario usuarioActivo = Sesion.getUsuarioActual();
         Conexion conn = new Conexion();
         boolean existeReservaVianda = conn.verificarRetroalimentacionVianda(usuarioActivo.getUsername());
         System.out.println(existeReservaVianda);
@@ -324,11 +327,11 @@ public class MisReservas extends javax.swing.JPanel {
         }else{
             
             javax.swing.JOptionPane.showMessageDialog(this, "Usted no reservo en el dia de la fecha, o ya realizo su retroalimentacion de la vianda","", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_txtcomedor2MousePressed
 
     private void txtcomedor3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcomedor3MousePressed
-      Usuario usuarioActivo = Sesion.getUsuarioActual();
+     /* Usuario usuarioActivo = Sesion.getUsuarioActual();
         Conexion conn = new Conexion();
         boolean existeReservaVianda = conn.verificarReservaVianda(usuarioActivo.getUsername());
         System.out.println(existeReservaVianda);
@@ -349,7 +352,7 @@ public class MisReservas extends javax.swing.JPanel {
         }else{
             
             javax.swing.JOptionPane.showMessageDialog(this, "Usted ya ha realizado su reserva en el dia de la fecha","con exito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        }
+        }*/
     }//GEN-LAST:event_txtcomedor3MousePressed
 
     private void txtcomedor4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtcomedor4MousePressed

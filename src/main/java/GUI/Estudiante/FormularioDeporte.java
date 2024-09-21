@@ -2,7 +2,7 @@
 package GUI.Estudiante;
 
 import GUI.Estudiante.PrincipalEstudiante;
-import conexion.Conexion;
+
 import java.awt.BorderLayout;
 import java.awt.Window;
 import java.io.File;
@@ -14,8 +14,14 @@ import javax.swing.AbstractButton;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-import logica.Sesion;
-import logica.Usuario;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 
 /**
  *

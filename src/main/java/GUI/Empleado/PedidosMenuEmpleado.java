@@ -7,7 +7,14 @@ package GUI.Empleado;
 import GUI.Empleado.NuevoPedidoInsumo;
 import java.sql.Statement;
 import javax.swing.JFrame;
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.*;
@@ -160,6 +167,7 @@ public class PedidosMenuEmpleado extends javax.swing.JPanel {
     }//GEN-LAST:event_RealizarNuevoPedidoMouseClicked
 
     public void mostrar(String tabla, JTable visor){
+        /*
         String sql = "select * from " + tabla;
         Statement st;
         //Conexion a la base de datos
@@ -195,7 +203,7 @@ public class PedidosMenuEmpleado extends javax.swing.JPanel {
         }catch(SQLException e){
             System.out.println(e.toString());
         }
-    }
+    */}
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton HistorialPedidos;

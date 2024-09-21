@@ -4,13 +4,19 @@
  */
 package GUI.Secretario;
 
-import conexion.Conexion;
+import Conexion.*;
+import DAO.*;
+import Tabla.*;
+import VO.*;
+import GUI.Empleado.*;
+import GUI.Estudiante.*;
+import GUI.Secretario.*;
+
 import GUI.Secretario.PrincipalSecretario;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
-import logica.Sesion;
-import logica.Usuario;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -330,7 +336,7 @@ public class Cargar_FacturaRemito extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MousePressed
 
     private void jButtonGuardarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonGuardarMousePressed
-        // TODO add your handling code here:
+       /* // TODO add your handling code here:
         //Verifico el tipo de archivo (Factura/Remito)
         if (opFactura.isSelected()){
             tipoArchivo = "Factura";
@@ -369,7 +375,7 @@ public class Cargar_FacturaRemito extends javax.swing.JFrame {
             principalS.setLocationRelativeTo(null);
             this.setVisible(false);
             this.dispose();
-        }
+        }*/
     }//GEN-LAST:event_jButtonGuardarMousePressed
 
     private void jDateChooser1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateChooser1MousePressed
