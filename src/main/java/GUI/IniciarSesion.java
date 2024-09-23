@@ -1,5 +1,6 @@
 package GUI;
-import icons.*;
+
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import Conexion.*;
@@ -16,7 +17,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 
+
 public class IniciarSesion extends javax.swing.JFrame {
+    public static UsuarioVO cuenta; 
 
     Conectar conexion = new Conectar();
  
@@ -65,11 +68,11 @@ public class IniciarSesion extends javax.swing.JFrame {
         panelder.setLayout(panelderLayout);
         panelderLayout.setHorizontalGroup(
             panelderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fotochicos, javax.swing.GroupLayout.PREFERRED_SIZE, 363, Short.MAX_VALUE)
+            .addComponent(fotochicos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelderLayout.setVerticalGroup(
             panelderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fotochicos, javax.swing.GroupLayout.PREFERRED_SIZE, 540, Short.MAX_VALUE)
+            .addComponent(fotochicos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         panelpantalla.add(panelder, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 360, 540));
@@ -350,13 +353,21 @@ public class IniciarSesion extends javax.swing.JFrame {
         ArrayList<UsuarioVO> list = loguear.buscarUsuario(nombre, contraseña);
          if(list.size() > 0){
                 System.out.println("Cuenta encontrada");
-                UsuarioVO cuenta = new UsuarioVO();
+                cuenta = new UsuarioVO();
                 cuenta = list.get(0);//obtener cuenta
                
                 if(nombre.equals(cuenta.getNombreUsuario()) &&   contraseña.equals(cuenta.getContraseniaUsuario())){
                     System.out.println("Contraseña y usuario validas");
                     
                     String rol = cuenta.getRol();
+                    System.out.println(cuenta.getNombre());
+        
+                    System.out.println(cuenta.getApellido());
+                    
+                    System.out.println(cuenta.getRol());
+                    System.out.println(cuenta.getCiudad());
+                    
+                    System.out.println("ROL: "+rol);
                      if (rol.equals("Estudiante")){
                         PrincipalEstudiante principalEs = new PrincipalEstudiante();
                         principalEs.setVisible(true);

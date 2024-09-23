@@ -133,7 +133,7 @@ public class UsuarioDAO{
     public ArrayList<UsuarioVO> buscarUsuario(String usuario, String contrasenia) {
         
         Conectar conec = new Conectar();
-        String sql = "SELECT * FROM cuentaUsuario where usuario = '"+usuario+"';";
+        String sql = "SELECT * FROM Usuario where NombreUsuario = '"+usuario+"';";
         ResultSet rs = null;
         PreparedStatement ps = null;
         UsuarioVO vo = null;
@@ -146,7 +146,13 @@ public class UsuarioDAO{
                 vo = new UsuarioVO();
                 vo.setNombreUsuario(rs.getString(1));
                 vo.setContraseniaUsuario(rs.getString(2));
-                vo.setRol(rs.getString(3));
+                vo.setNombre(rs.getString(3));
+                vo.setApellido(rs.getString(4));
+                vo.setDni(rs.getString(5));
+                vo.setCiudad(rs.getString(6));
+                vo.setBarrio(rs.getString(7));
+                vo.setDireccion(rs.getString(8));
+                vo.setRol(rs.getString(9));
                 list.add(vo);
                
             }

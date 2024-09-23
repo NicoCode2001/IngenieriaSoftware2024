@@ -60,11 +60,9 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         btnturnos = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        btnconfig = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        btnconfig = new javax.swing.JPanel();
         btncerrar = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -228,24 +226,24 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         });
         btnturnos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/asistencia-medica.png"))); // NOI18N
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/configuraciones.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel7MousePressed(evt);
+                jLabel9MousePressed(evt);
             }
         });
-        btnturnos.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
+        btnturnos.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Mis turnos");
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Configuración");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel8MousePressed(evt);
+                jLabel10MousePressed(evt);
             }
         });
-        btnturnos.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
+        btnturnos.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         btnconfig.setBackground(new java.awt.Color(175, 0, 0));
         btnconfig.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -262,25 +260,6 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
             }
         });
         btnconfig.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/configuraciones.png"))); // NOI18N
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel9MousePressed(evt);
-            }
-        });
-        btnconfig.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Configuración");
-        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel10MousePressed(evt);
-            }
-        });
-        btnconfig.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         btncerrar.setBackground(new java.awt.Color(175, 0, 0));
         btncerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -463,7 +442,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         setColor(btnturnos);
         resetColor(btnconfig);
         resetColor(btncerrar);
-        // Abrir sección
+       /* // Abrir sección
         MisTurnos p1 = new MisTurnos();
         p1.setSize(530, 540);
         p1.setLocation(0,0);
@@ -471,7 +450,7 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.removeAll();
         panelDer.add(p1, BorderLayout.CENTER);
         panelDer.revalidate();
-        panelDer.repaint();
+        panelDer.repaint();*/
     }//GEN-LAST:event_btnturnosMousePressed
 
     private void btnconfigMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnconfigMouseEntered
@@ -655,42 +634,6 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
         panelDer.repaint();
     }//GEN-LAST:event_iconpriMousePressed
 
-    private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
-        resetColor(btnpri);
-        resetColor(btninscr);
-        setColor(btnreservas);
-        resetColor(btnturnos);
-        resetColor(btnconfig);
-        resetColor(btncerrar);
-        // Abrir sección
-        MisTurnos p1 = new MisTurnos();
-        p1.setSize(530, 540);
-        p1.setLocation(0,0);
-
-        panelDer.removeAll();
-        panelDer.add(p1, BorderLayout.CENTER);
-        panelDer.revalidate();
-        panelDer.repaint();
-    }//GEN-LAST:event_jLabel8MousePressed
-
-    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
-        resetColor(btnpri);
-        resetColor(btninscr);
-        setColor(btnreservas);
-        resetColor(btnturnos);
-        resetColor(btnconfig);
-        resetColor(btncerrar);
-        // Abrir sección
-        MisTurnos p1 = new MisTurnos();
-        p1.setSize(530, 540);
-        p1.setLocation(0,0);
-
-        panelDer.removeAll();
-        panelDer.add(p1, BorderLayout.CENTER);
-        panelDer.revalidate();
-        panelDer.repaint();
-    }//GEN-LAST:event_jLabel7MousePressed
-
     private void jLabel10MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MousePressed
         resetColor(btnpri);
         resetColor(btninscr);
@@ -776,8 +719,6 @@ public class PrincipalEstudiante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel panelDer;

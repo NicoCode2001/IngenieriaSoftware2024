@@ -2,6 +2,7 @@ package DAO;
 
 import Conexion.Conectar;
 import VO.ReservaviandaVO;
+import VO.UsuarioVO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -118,7 +119,50 @@ public class ReservaviandaDAO{
                 conec.desconectar();
             }catch(Exception ex){}
         }
+    };
+    
+   
+ public ArrayList<ReservaviandaVO> buscarReserva(String usuario) {
+        
+        Conectar conec = new Conectar();
+        String sql = "SELECT * FROM reservavianda where NombreUsuario = '"+usuario+"';";
+        ResultSet rs = null;
+        PreparedStatement ps = null;
+       ReservaviandaVO vo = null;
+        ArrayList<ReservaviandaVO> list = new ArrayList<ReservaviandaVO>();
+        try{
+            ps = conec.getConnection().prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            while(rs.next()){
+                vo = new ReservaviandaVO();
+                vo.setCodReserva(rs.getInt(1));
+                vo.setCodVianda(rs.getInt(2));
+                vo.setNombreUsuario(rs.getString(3));
+                vo.setCalificacion(rs.getString(4));
+                vo.setOpinion(rs.getString(5));
+                vo.setCancelada(rs.getString(6));
+                list.add(vo);
+               
+            }
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                ps.close();
+                rs.close();
+                conec.desconectar();
+            }catch(Exception ex){}
+        }
+        System.out.println(list);
+        return list;
+        
+        
+        
+  
     }
-
+    
 
 }

@@ -118,7 +118,7 @@ public class ViandaDAO{
                 conec.desconectar();
             }catch(Exception ex){}
         }
-    }
-
+    };
+   
 
 }

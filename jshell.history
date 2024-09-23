@@ -1,0 +1,11 @@
+VAR#>mvn clean install
+VAR#>mvn clean install
+VAR#>mvn clean install;
+CMD#>/imports
+VAR#>mvn clean install;
+VAR#>mvn clean install
+VAR#>mvn clean install;
+VAR#>mvn clean install;
+EXPRESSION#>mvn -version
+EXPRESSION#>pwd
+EXPRESSION#>pwd;
